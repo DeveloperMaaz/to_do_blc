@@ -35,24 +35,24 @@ class _ShowTasksState extends State<ShowTasks> {
       itemCount: widget.taskstate.length,
       itemBuilder: (BuildContext context, int index) {
 
-        final currentTodo = widget.taskstate[index];
+        final currentTask = widget.taskstate[index];
 
         return Card(
           child: ListTile(
             title: Text(
-              currentTodo.title,
+              currentTask.title,
               style: const TextStyle(
                   fontSize: 18, fontWeight: FontWeight.bold),
             ),
 
             subtitle: Text(
-              currentTodo.description,
+              currentTask.description,
             ),
             trailing: IconButton(
                 onPressed: () {
                   context
                       .read<TodoTaskBloc>()
-                      .add(DeleteTaskEvent(todoId: currentTodo.id));
+                      .add(DeleteTaskEvent(todoId: currentTask.id));
                 },
                 icon: const Icon(Icons.delete)),
           ),
@@ -61,15 +61,3 @@ class _ShowTasksState extends State<ShowTasks> {
     );
   }
 }
-
-
-
-
-
-/*
- Text(
-                  currentTodo.title,
-                  style: const TextStyle(
-                      fontSize: 16, fontWeight: FontWeight.bold),
-                ),
- */

@@ -28,7 +28,7 @@ class TodoTaskBloc extends Bloc<TaskEvent, TaskBlocState> {
   void _onDeleteTask(DeleteTaskEvent event, Emitter<TaskBlocState> emit) {
     final state = this.state;
     if (state is TaskLoaded) {
-      state.todo.removeWhere((element) => element.id == event.todoId);
+      state.todo.removeWhere((task) => task.id == event.todoId);
       emit(TaskLoaded(todo: state.todo));
     }
   }

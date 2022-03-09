@@ -43,7 +43,7 @@ class _AddNewTaaskState extends State<AddNewTaask> {
                   TextField(
                     controller: tittleController,
                     decoration: const InputDecoration(
-                      hintText: "Enter Task ",
+                      hintText: "Enter Your Task ",
                     ),
                   ),
                   const SizedBox(
@@ -52,7 +52,7 @@ class _AddNewTaaskState extends State<AddNewTaask> {
                   TextField(
                     controller: discController,
                     decoration: const InputDecoration(
-                      hintText: "Enter description",
+                      hintText: "Enter Task description",
                     ),
                   ),
                   const SizedBox(

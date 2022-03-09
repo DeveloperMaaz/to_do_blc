@@ -32,7 +32,7 @@ class _TasksScreenState extends State<TasksScreen> {
         if (state is TaskLoad) {
           return const Center(child: CircularProgressIndicator());
         }
-        if (state is TaskLoaded) {
+        else if (state is TaskLoaded) {
           return Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
